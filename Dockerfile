@@ -27,7 +27,7 @@ RUN conda install --yes \
 RUN conda install --yes \
     -c conda-forge \
     boto3 \
-    datacube=1.7 \
+    datacube==1.7 \
     descartes \
     distributed==2.12.0 \
     folium \
@@ -49,6 +49,7 @@ RUN conda install --yes \
     && find /opt/conda/ -type f,l -name '*.js.map' -delete \
     && rm -rf /opt/conda/pkgs
 
+# Install additional useful EO-related packages from GA
 RUN pip install --no-cache-dir \
     Cython==0.29.15 \
     hdstats==0.1.3 \
