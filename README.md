@@ -6,4 +6,4 @@
 
 ### Automated builds
 
-Docker images are automatically built and published to [Docker Hub](https://hub.docker.com/u/satapps) from this repo when a release tag, x.y.z, is created.
+Docker images are automatically built and published to [Docker Hub](https://hub.docker.com/u/satapps) from this repo when a release tag, vx.y.z, is created.
