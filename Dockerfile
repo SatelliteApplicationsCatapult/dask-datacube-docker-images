@@ -1,4 +1,4 @@
-FROM "luigidifraia/dask-datacube:dask-2.14.0-gdal-2.4.4"
+FROM luigidifraia/dask-datacube:v1.2.1-alpha
 
 LABEL maintainer="Luigi Di Fraia"
 
