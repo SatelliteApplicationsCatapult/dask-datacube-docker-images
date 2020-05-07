@@ -1,6 +1,6 @@
-# dask-datacube-docker-images
+# Dask Datacube  Docker Images
 
-:warning: This is an ancillary repository that contains customized Docker images. :warning:
+:warning: This is an ancillary repository that contains customized Docker images :warning:
 
 ## Building and pushing to Docker Hub
 
