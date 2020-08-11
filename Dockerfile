@@ -4,4 +4,4 @@ LABEL maintainer="Luigi Di Fraia"
 
 # Install additional useful EO-related SAC utilities
 RUN pip install --no-cache-dir \
-    git+https://github.com/SatelliteApplicationsCatapult/datacube-utilities.git#egg=datacube_utilities
+    git+https://github.com/SatelliteApplicationsCatapult/datacube-utilities.git@odc-1.8-testing#egg=datacube_utilities
