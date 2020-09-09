@@ -1,4 +1,4 @@
-FROM luigidifraia/dask-datacube:v3.1.0-alpha
+FROM luigidifraia/dask-datacube:v3.1.1-alpha
 
 LABEL maintainer="Luigi Di Fraia"
 
