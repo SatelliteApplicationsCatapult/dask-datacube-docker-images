@@ -2,7 +2,7 @@ name: publish docker containers
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   workfinder:
@@ -28,4 +28,4 @@ jobs:
           context: ./
           file: Dockerfile
           push: true
-          tags: satapps/dask-datacube:v3.2.0-alpha
+          tags: satapps/dask-datacube:${{ github.event.release.tag_name }}
