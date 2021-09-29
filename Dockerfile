@@ -14,6 +14,7 @@ RUN mamba install --yes --override-channels -c conda-forge \
         nomkl \
         numpy==1.18.1 \
         pandas==1.0.1  \
+        pyproj==2.6.1.post1\
         tini==0.18.0 
 
 RUN mamba install --yes \
