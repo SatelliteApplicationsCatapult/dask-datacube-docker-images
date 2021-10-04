@@ -34,6 +34,8 @@ RUN mamba install --yes \
 
 RUN pip install --no-cache-dir  odc-algo==0.1.dev439+gd29f1df     --extra-index-url=https://packages.dea.ga.gov.au
 
+RUN apt-get install -y libpoppler-dev
+
 # Install additional useful EO-related SAC utilities
 RUN pip install --no-cache-dir \
     git+https://github.com/SatelliteApplicationsCatapult/datacube-utilities.git#egg=datacube_utilities
