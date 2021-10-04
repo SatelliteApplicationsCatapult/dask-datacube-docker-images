@@ -34,7 +34,7 @@ RUN mamba install --yes \
 
 RUN pip install --no-cache-dir  odc-algo==0.1.dev439+gd29f1df     --extra-index-url=https://packages.dea.ga.gov.au
 
-RUN apt-get update && apt-get install -y --fix-missing libpoppler-dev
+RUN apt-get --allow-releaseinfo-change update && apt-get install -y --fix-missing libpoppler-dev
 
 # Install additional useful EO-related SAC utilities
 RUN pip install --no-cache-dir \
