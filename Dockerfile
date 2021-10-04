@@ -6,7 +6,7 @@ LABEL maintainer="Emily Selwood"
 RUN conda install --yes     python=3.6
 RUN conda install --yes mamba -n base -c conda-forge
 
-RUN mamba install --yes --override-channels -c conda-forge \
+RUN mamba install --yes -c conda-forge \
         python-blosc \
         cytoolz \
         dask==2.23.0 \
@@ -18,7 +18,6 @@ RUN mamba install --yes --override-channels -c conda-forge \
         tini==0.18.0 
 
 RUN mamba install --yes \
-    --override-channels \
     -c conda-forge \
     boto3 \
     datacube==1.8.3 \
