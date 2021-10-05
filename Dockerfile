@@ -18,11 +18,13 @@ RUN mamba install --yes -c conda-forge \
         tini==0.18.0 
 
 RUN mamba install --yes \
+    gdal==2.2.2
+
+RUN mamba install --yes \
     -c conda-forge \
     boto3 \
     datacube==1.8.3 \
     distributed \
-    gdal \
     scipy \
     hdstats==0.2.1 \
     && conda clean -tipsy \
@@ -33,8 +35,6 @@ RUN mamba install --yes \
     && rm -rf /opt/conda/pkgs
 
 RUN pip install --no-cache-dir  odc-algo==0.1.dev439+gd29f1df     --extra-index-url=https://packages.dea.ga.gov.au
-
-RUN apt-get --allow-releaseinfo-change update && apt-get install -y --fix-missing libpoppler-dev
 
 # Install additional useful EO-related SAC utilities
 RUN pip install --no-cache-dir \
