@@ -15,6 +15,7 @@ RUN mamba install --yes -c conda-forge \
         numpy==1.18.1 \
         pandas==1.0.1  \
         pyproj==2.6.1.post1\
+        psycopg2 \
         tini==0.18.0 
 
 RUN mamba install --yes \
