@@ -28,7 +28,7 @@ RUN mamba install --yes \
     datacube==1.8.3 \
     distributed \
     scipy \
-    hdstats==0.2.1 \
+    xarray==0.16.2 \
     && conda clean -tipsy \
     && find /opt/conda/ -type f,l -name '*.a' -delete \
     && find /opt/conda/ -type f,l -name '*.pyc' -delete \
@@ -36,7 +36,7 @@ RUN mamba install --yes \
     && find /opt/conda/lib/python*/site-packages/bokeh/server/static -type f,l -name '*.js' -not -name '*.min.js' -delete \
     && rm -rf /opt/conda/pkgs
 
-RUN pip install --no-cache-dir  odc-algo==0.1.dev439+gd29f1df     --extra-index-url=https://packages.dea.ga.gov.au
+RUN pip install --no-cache-dir  odc-algo==0.1.dev439+gd29f1df hdstats==0.1.8 --extra-index-url=https://packages.dea.ga.gov.au
 # RUN apt-get --allow-releaseinfo-change update  && apt-get install -y libpoppler-dev
 # Install additional useful EO-related SAC utilities
 RUN pip install --no-cache-dir \
