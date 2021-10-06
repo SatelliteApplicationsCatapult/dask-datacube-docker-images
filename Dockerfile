@@ -19,7 +19,8 @@ RUN mamba install --yes -c conda-forge \
         tini==0.18.0 
 
 RUN mamba install --yes \
-    gdal==2.2.2
+    -c conda-forge \
+    gdal==3.0.4
 
 RUN mamba install --yes \
     -c conda-forge \
@@ -36,7 +37,7 @@ RUN mamba install --yes \
     && rm -rf /opt/conda/pkgs
 
 RUN pip install --no-cache-dir  odc-algo==0.1.dev439+gd29f1df     --extra-index-url=https://packages.dea.ga.gov.au
-
+# RUN apt-get --allow-releaseinfo-change update  && apt-get install -y libpoppler-dev
 # Install additional useful EO-related SAC utilities
 RUN pip install --no-cache-dir \
     git+https://github.com/SatelliteApplicationsCatapult/datacube-utilities.git#egg=datacube_utilities
