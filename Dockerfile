@@ -26,7 +26,7 @@ RUN mamba install --yes \
     -c conda-forge \
     boto3 \
     datacube==1.8.3 \
-    folium~=0.12.1 \
+    # folium~=0.12.1 \
     distributed \
     scipy \
     xarray==0.16.2 \
