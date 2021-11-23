@@ -37,7 +37,7 @@ RUN mamba install --yes \
     && find /opt/conda/lib/python*/site-packages/bokeh/server/static -type f,l -name '*.js' -not -name '*.min.js' -delete \
     && rm -rf /opt/conda/pkgs
 
-RUN pip install --no-cache-dir  odc-algo==0.1.dev439+gd29f1df hdstats==0.1.8 rasterio==1.2.9 --extra-index-url=https://packages.dea.ga.gov.au
+RUN pip install --no-cache-dir  odc-algo==0.1.dev439+gd29f1df hdstats==0.1.8 rasterio==1.2.10 --extra-index-url=https://packages.dea.ga.gov.au
 # RUN apt-get --allow-releaseinfo-change update  && apt-get install -y libpoppler-dev
 # Install additional useful EO-related SAC utilities
 RUN pip install --no-cache-dir \
